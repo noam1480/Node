@@ -144,6 +144,17 @@ namespace ConsoleApp47
             }
             return first;
         }
+        public static int Numofrezef(Node<int> lst , int num)
+        {
+            int count = 0; 
+            while(lst.HasNext())
+            {
+                if (lst.GetValue() == num && lst.GetNext().GetValue()!=num)
+                        count++;
+                lst = lst.GetNext();
+            }
+            return count;
+        }
     }
 }
 
