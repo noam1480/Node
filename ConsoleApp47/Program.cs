@@ -25,6 +25,10 @@ namespace ConsoleApp47
             //Console.WriteLine(Get_Min(lst));
             //Console.WriteLine(TrueIfNumInNode(lst, 8));
             Print(OnlyEvenNode(lst));
+            Printbetwin2num(lst, 3, 5);
+            Node<int> from = GetRefByIdx(lst, 3);
+            Node <int> to = GetRefByIdx(lst, 5);
+            FromNodeToNode(lst, from, to);
         }
         public static Node<int> CreateList()
         {
@@ -166,6 +170,14 @@ namespace ConsoleApp47
                 Console.WriteLine(lst.GetValue());
                 lst = lst.GetNext();
             }
+        }
+        public static Node<int> GetRefByIdx(Node<int> lst,int num)
+        {
+            for(int i = 0; i < num-1; i++)
+            {
+                lst = lst.GetNext();
+            }
+            return lst;
         }
     }
 }
