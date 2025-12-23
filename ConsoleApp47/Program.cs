@@ -155,6 +155,18 @@ namespace ConsoleApp47
             }
             return count;
         }
+        public static void Printbetwin2num(Node<int> lst, int num1, int num2)
+        {
+            for (int i = 0; i < num1-1; i++)
+            {
+                lst = lst.GetNext();
+            }
+            for (int i = num1; i <= num2; i++)
+            {
+                Console.WriteLine(lst.GetValue());
+                lst = lst.GetNext();
+            }
+        }
     }
 }
 
